@@ -1,12 +1,27 @@
-void *ft_memset(void *str, int c, unsigned int n)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/02/03 17:48:46 by gsousa-l          #+#    #+#             */
+/*   Updated: 2021/02/03 18:12:37 by gsousa-l         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <unistd.h>
+
+void    *ft_memset(void *s, int c, size_t n)
 {
-    int count;
+    size_t count;
 
     count = 0;
-    while(count <)
+    while (count < n)
     {
-        str[count] = c;
+        *((char*)s + count) = (char)c;
         count++;
     }
-    str[count] = '\0';
+    *((char*)s + count) = (char)c;
+    return (s);
 }
