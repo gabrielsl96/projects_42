@@ -6,11 +6,11 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/03 21:59:06 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/02/08 18:58:20 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/02/09 18:24:09 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void    *ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
