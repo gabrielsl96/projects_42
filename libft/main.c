@@ -21,10 +21,10 @@ int main(void)
     printf("original:%s\n", text2);
     printf("--------------------\n");
     //memcpy
-    char test_memcpy_1[20] = "Eita";
-    char test_memcpy_2[20] = " ";
-    char test_memcpy_3[20] = "Eita";
-    char test_memcpy_4[20] = " ";
+    char test_memcpy_1[20] = "asdkjasdjkadsah";
+    char test_memcpy_2[20] = " Carambola";
+    char test_memcpy_3[20] = "asdkjasdjkadsah";
+    char test_memcpy_4[20] = " Carambola";
     printf("Função: memcpy\n");
     ft_memcpy(test_memcpy_1, test_memcpy_2, 9);
     printf("ft_bzero:%s\n", test_memcpy_1);
@@ -32,10 +32,10 @@ int main(void)
     printf("original:%s\n", test_memcpy_3);
     printf("--------------------\n");
     //memccpy
-    char test_memccpy_1[10] = "";
-    char test_memccpy_2[10] = " Carambola";
-    char test_memccpy_3[10] = "";
-    char test_memccpy_4[10] = " Carambola";
+    char test_memccpy_1[20] = "asdkjasdjkadsah";
+    char test_memccpy_2[20] = " Carambola";
+    char test_memccpy_3[20] = "asdkjasdjkadsah";
+    char test_memccpy_4[20] = " Carambola";
     printf("Função: memccpy\n");
     ft_memccpy(test_memccpy_1, test_memccpy_2, 'a', 20);
     printf("ft_memccpy:%s\n", test_memccpy_1);
@@ -72,6 +72,17 @@ int main(void)
     printf("Função: strlen\n");
     printf("ft_strlen:%li\n", ft_strlen(test_strlen));
     printf("original:%li\n", strlen(test_strlen));
+    printf("--------------------\n");
+    //strlcpy
+    char test_strlcpy_1[20] = "asdkjasdjkadsah";
+    char test_strlcpy_2[20] = " Carambola";
+    char test_strlcpy_3[20] = "asdkjasdjkadsah";
+    char test_strlcpy_4[20] = " Carambola";
+    printf("Função: strlcpy\n");
+    ft_strlcpy(test_strlcpy_1, test_strlcpy_2, 20);
+    printf("ft_strlcpy:%s\n", test_strlcpy_1);
+    strlcpy(test_strlcpy_3, test_strlcpy_4, 20);
+    printf("original:%s\n", test_strlcpy_3);
     printf("--------------------\n");
     //isalnum
     char a_alnum = ' ';
