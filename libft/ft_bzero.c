@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/08 13:48:57 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/02/08 13:48:57 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/02/12 14:25:44 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,5 @@ void    ft_bzero(void *s, size_t n)
         *((char *)s + count) = '\0';
         count++;
     }
-    *((char *)s + count) = '\0';
+
 }
