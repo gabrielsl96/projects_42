@@ -76,13 +76,44 @@ int main(void)
     //strlcpy
     char test_strlcpy_1[20] = "asdkjasdjkadsah";
     char test_strlcpy_2[20] = " Carambola";
-    char test_strlcpy_3[20] = "asdkjasdjkadsah";
-    char test_strlcpy_4[20] = " Carambola";
+    //char test_strlcpy_3[20] = "asdkjasdjkadsah";
+    //char test_strlcpy_4[20] = " Carambola";
     printf("Função: strlcpy\n");
-    ft_strlcpy(test_strlcpy_1, test_strlcpy_2, 20);
+    ft_strlcpy(test_strlcpy_1, test_strlcpy_2, 0);
     printf("ft_strlcpy:%s\n", test_strlcpy_1);
-    strlcpy(test_strlcpy_3, test_strlcpy_4, 20);
-    printf("original:%s\n", test_strlcpy_3);
+    //strlcpy(test_strlcpy_3, test_strlcpy_4, 20);
+    //printf("original:%s\n", test_strlcpy_3);
+    printf("--------------------\n");
+    //strlcat
+    char test_strlcat_1[40] = "asdkjasdjkadsah";
+    char test_strlcat_2[40] = " Carambola";
+    //char test_strlcat_3[20] = "asdkjasdjkadsah";
+    //char test_strlcat_4[20] = " Carambola";
+    printf("Função: strlcat\n");
+    ft_strlcat(test_strlcat_1, test_strlcat_2, 10);
+    printf("ft_strlcat:%s\n", test_strlcat_1);
+    //strlcat(test_strlcat_3, test_strlcat_4, 20);
+    //printf("original:%s\n", test_strlcat_3);
+    printf("--------------------\n");
+    //strchr
+    char test_strchr_1[40] = "asdjasdjkadsah";
+    printf("Função: strchr\n");
+    printf("ft_strchr:%s\n", ft_strchr(test_strchr_1, 'k'));
+    printf("original:%s\n", strchr(test_strchr_1, 'k'));
+    printf("--------------------\n");
+    //strnstr
+    char test_strnstr_1[40] = "Eita que teste legal";
+    char test_strnstr_2[40] = "Eita";
+    printf("Função: strnstr\n");
+    printf("ft_strnstr:%s\n", ft_strnstr(test_strnstr_1, test_strnstr_2, 20));
+    //printf("original:%d\n", strnstr(test_strnstr_1, test_strnstr_2, 20));
+    printf("--------------------\n");
+    //strncmp
+    char test_strncmp[10] = "ABC";
+    char test_strncmp_2[10] = "";
+    printf("Função: strncmp\n");
+    printf("ft_strncmp:%i\n", ft_strncmp(test_strncmp, test_strncmp_2, 3));
+    printf("original:%i\n", strncmp(test_strncmp, test_strncmp_2, 3));
     printf("--------------------\n");
     //isalnum
     char a_alnum = ' ';
