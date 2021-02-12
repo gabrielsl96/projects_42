@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 10:54:53 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/02/09 10:54:53 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/02/12 17:02:53 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,18 @@ void    *ft_memmove(void *dest, const void *src, size_t n)
     count = 0;
     if (dest == NULL && src == NULL)
         return (NULL);
-    while (count < n)
-    {
-        dest_temp[count] = src_temp[count];
-        count++;
-    }
+	else if (dest_temp > src_temp)
+	{
+		while (n-- > 0)
+				dest_temp[n] = src_temp[n];
+	}
+	else
+	{
+    	while (count < n)
+    	{
+        	dest_temp[count] = src_temp[count];
+        	count++;
+    	}
+	}
     return (dest);
 }
