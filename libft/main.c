@@ -61,11 +61,11 @@ int main(void)
     printf("original:%s\n", ((char *)memchr(test_memchr_1, 'l', 1)));
     printf("--------------------\n");
     //memcmp
-    char test_memcmp[10] = "Carambola";
-    char test_memcmp_2[10] = "Carfmbola";
+    char test_memcmp[10] = "A";
+    char test_memcmp_2[10] = "a";
     printf("Função: memcmp\n");
-    printf("ft_memcmp:%i\n", ft_memcmp(test_memcmp, test_memcmp_2, 0));
-    printf("original:%i\n", memcmp(test_memcmp, test_memcmp_2, 0));
+    printf("ft_memcmp:%i\n", ft_memcmp(test_memcmp, test_memcmp_2, 10));
+    printf("original:%i\n", memcmp(test_memcmp, test_memcmp_2, 10));
     printf("--------------------\n");
     //strlen
     char test_strlen[10] = "Carambola";
