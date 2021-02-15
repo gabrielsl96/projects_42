@@ -15,6 +15,8 @@
 size_t      ft_strlcpy(char *dest, const char *src, size_t size)
 {
     size_t count;
+    int dest_len;
+    unsigned char
 
     count = 0;
     while(count < size)
@@ -23,5 +25,5 @@ size_t      ft_strlcpy(char *dest, const char *src, size_t size)
         count ++;
     }
     *(dest + count) = '\0';
-    return (0);
+    return (count);
 }
