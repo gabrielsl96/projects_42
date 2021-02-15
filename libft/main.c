@@ -115,8 +115,8 @@ int main(void)
     //printf("original:%d\n", strnstr(test_strnstr_1, test_strnstr_2, 20));
     printf("--------------------\n");
     //strncmp
-    char test_strncmp[10] = "ABC";
-    char test_strncmp_2[10] = "";
+    char test_strncmp[10] = "\0";
+    char test_strncmp_2[10] = "ABC";
     printf("Função: strncmp\n");
     printf("ft_strncmp:%i\n", ft_strncmp(test_strncmp, test_strncmp_2, 3));
     printf("original:%i\n", strncmp(test_strncmp, test_strncmp_2, 3));
