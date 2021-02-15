@@ -101,6 +101,12 @@ int main(void)
     printf("ft_strchr:%s\n", ft_strchr(test_strchr_1, 'a'));
     printf("original:%s\n", strchr(test_strchr_1, 'a'));
     printf("--------------------\n");
+    //strrchr
+    char test_strrchr_1[40] = "asdjasdjkadsah";
+    printf("Função: strrchr\n");
+    printf("ft_strrchr:%s\n", ft_strrchr(test_strrchr_1, '\0'));
+    printf("original:%s\n", strrchr(test_strchr_1, '\0'));
+    printf("--------------------\n");
     //strnstr
     char test_strnstr_1[40] = "Eita que teste legal";
     char test_strnstr_2[40] = "Eita";

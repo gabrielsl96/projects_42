@@ -16,15 +16,15 @@ char    *ft_strrchr(const char *s, int c)
 {
     int count;
     int last;
+    int len_s;
 
     count = 0;
     last = -1;
-    while (*(s + count) != '\0')
+    len_s = ft_strlen(s);
+    while (count <= len_s)
     {
         if (*(s + count) == c)
-        {
             last = count;
-        }
         count++;
     }
     if (last >= 0)
