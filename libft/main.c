@@ -98,8 +98,8 @@ int main(void)
     //strchr
     char test_strchr_1[40] = "asdjasdjkadsah";
     printf("Função: strchr\n");
-    printf("ft_strchr:%s\n", ft_strchr(test_strchr_1, 'k'));
-    printf("original:%s\n", strchr(test_strchr_1, 'k'));
+    printf("ft_strchr:%s\n", ft_strchr(test_strchr_1, 'a'));
+    printf("original:%s\n", strchr(test_strchr_1, 'a'));
     printf("--------------------\n");
     //strnstr
     char test_strnstr_1[40] = "Eita que teste legal";
