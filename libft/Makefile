@@ -6,7 +6,7 @@
 #    By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/12 10:18:13 by gsousa-l          #+#    #+#              #
-#    Updated: 2021/02/12 16:41:54 by gsousa-l         ###   ########.fr        #
+#    Updated: 2021/02/16 15:58:39 by gsousa-l         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,6 +30,7 @@ SRC 	= ft_bzero.c \
 			ft_strlcpy.c \
 			ft_strlen.c \
 			ft_strncmp.c \
+			ft_atoi \
 			ft_strnstr.c \
 			ft_strrchr.c \
 			ft_tolower.c \
