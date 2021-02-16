@@ -6,16 +6,16 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 18:45:24 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/02/09 18:45:24 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/02/16 19:25:32 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int     ft_isalpha(int c)
+int	ft_isalpha(int c)
 {
-    if ((c >= 'A' && c <= 'Z')
-    || (c >= 'a' && c <= 'z'))
-    {
-        return (1);
-    }
-    return (0);
+	if ((c >= 'A' && c <= 'Z')
+	|| (c >= 'a' && c <= 'z'))
+	{
+		return (1);
+	}
+	return (0);
 }

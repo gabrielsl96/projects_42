@@ -6,23 +6,23 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/03 21:54:55 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/02/12 14:43:35 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/02/16 20:08:17 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    *ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-    size_t count;
+	size_t count;
 
-    count = 0;
+	count = 0;
 	if (dest == NULL && src == NULL)
 		return (NULL);
-    while (count < n)
-    {
-        *((char *) dest + count) = *((char *) src + count);
-        count++;
-    }
-    return dest;
+	while (count < n)
+	{
+		*((char *)dest + count) = *((char *)src + count);
+		count++;
+	}
+	return (dest);
 }
