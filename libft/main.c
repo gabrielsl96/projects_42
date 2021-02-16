@@ -136,8 +136,8 @@ int main(void)
     printf("--------------------\n");
     //atoi
     printf("Função: atoi\n");
-    char test_atoi_1[20] = "\t\na-52685";
-    char test_atoi_2[20] = "\t\nb52685";
+    char test_atoi_1[20] = "\t\n2147483647";
+    char test_atoi_2[20] = "\t\n-2147483647";
     printf("Ft_atoi: %i\n", ft_atoi(test_atoi_1));
     printf("Ft_atoi: %i\n", ft_atoi(test_atoi_2));
     printf("original: %i\n", atoi(test_atoi_1));
