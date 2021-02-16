@@ -76,13 +76,13 @@ int main(void)
     //strlcpy
     char test_strlcpy_1[20] = "asdkjasdjkadsah";
     char test_strlcpy_2[20] = " Carambola";
-    //char test_strlcpy_3[20] = "asdkjasdjkadsah";
-    //char test_strlcpy_4[20] = " Carambola";
+    char test_strlcpy_3[20] = "asdkjasdjkadsah";
+    char test_strlcpy_4[20] = " Carambola";
     printf("Função: strlcpy\n");
     ft_strlcpy(test_strlcpy_1, test_strlcpy_2, 0);
     printf("ft_strlcpy:%s\n", test_strlcpy_1);
-    //strlcpy(test_strlcpy_3, test_strlcpy_4, 20);
-    //printf("original:%s\n", test_strlcpy_3);
+    strlcpy(test_strlcpy_3, test_strlcpy_4, 20);
+    printf("original:%s\n", test_strlcpy_3);
     printf("--------------------\n");
     //strlcat
     char test_strlcat_1[40] = "asdkjasdjkadsah";
@@ -91,15 +91,15 @@ int main(void)
     char test_strlcat_4[20] = " Carambola";
     char	s1[4] = "";
 	char	s2[4] = "";
-	r1 = strlcat(s1, "thx to ntoniolo for this test !", 4);
-	r2 = ft_strlcat(s2, "thx to ntoniolo for this test !", 4);
+	size_t r1 = strlcat(s1, "thx to ntoniolo for this test !", 4);
+	size_t r2 = ft_strlcat(s2, "thx to ntoniolo for this test !", 4);
     printf("Função: strlcat\n");
-    print("Orginal: Texto: %s e resultado: %i\n", s1, r1);
-    print("Texto: %s e resultado: %i\n", s2, r2);
+    printf("Orginal: Texto: %s e resultado: %zu\n", s1, r1);
+    printf("Texto: %s e resultado: %zu\n", s2, r2);
     ft_strlcat(test_strlcat_1, test_strlcat_2, 10);
     printf("ft_strlcat:%s\n", test_strlcat_1);
-    //strlcat(test_strlcat_3, test_strlcat_4, 20);
-    //printf("original:%s\n", test_strlcat_3);
+    strlcat(test_strlcat_3, test_strlcat_4, 10);
+    printf("original:%s\n", test_strlcat_3);
     printf("--------------------\n");
     //strchr
     char test_strchr_1[40] = "asdjasdjkadsah";
@@ -118,7 +118,7 @@ int main(void)
     char test_strnstr_2[40] = "Eita";
     printf("Função: strnstr\n");
     printf("ft_strnstr:%s\n", ft_strnstr(test_strnstr_1, test_strnstr_2, 20));
-    //printf("original:%d\n", strnstr(test_strnstr_1, test_strnstr_2, 20));
+    printf("original:%s\n", strnstr(test_strnstr_1, test_strnstr_2, 20));
     printf("--------------------\n");
     //strncmp
     char test_strncmp[10] = "\0";
