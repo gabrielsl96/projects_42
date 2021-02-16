@@ -114,19 +114,18 @@ int main(void)
     printf("original:%s\n", strrchr(test_strchr_1, '\0'));
     printf("--------------------\n");
     //strnstr
-    char test_strnstr_1[40] = "Eita que teste legal";
-    char test_strnstr_2[40] = "Eita";
-    char	*s1 = "MZIRIBMZIRIBMZE123";
-	char	*s2 = "MZIRIBMZE";
-	size_t	max = strlen(s2);
-	char	*i1 = strnstr(s1, s2, max);
-	char	*i2 = ft_strnstr(s1, s2, max);
+    char *test_strnstr_1 = "PAR PARAque teste legal";
+    char *test_strnstr_2 = "PARA";
+    char	*f1 = "MZIRIBMZIRIBMZE123";
+	char	*f2 = "MZIRIBMZE";
+	size_t	max = strlen(f2);
+	char	*i1 = strnstr(f1, f2, max);
+	char	*i2 = ft_strnstr(f1, f2, max);
     printf("Função: strnstr\n");
     printf("ft_strnstr:%s\n", ft_strnstr(test_strnstr_1, test_strnstr_2, 20));
     printf("original:%s\n", strnstr(test_strnstr_1, test_strnstr_2, 20));
-    printf("Função: strnstr\n");
-    printf("ft_strnstr:%s\n", i1;
-    printf("original:%s\n", i2));
+    printf("ft_strnstr:%s\n", i1);
+    printf("original:%s\n", i2);
     printf("--------------------\n");
     //strncmp
     char test_strncmp[10] = "\0";
