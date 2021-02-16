@@ -116,9 +116,17 @@ int main(void)
     //strnstr
     char test_strnstr_1[40] = "Eita que teste legal";
     char test_strnstr_2[40] = "Eita";
+    char	*s1 = "MZIRIBMZIRIBMZE123";
+	char	*s2 = "MZIRIBMZE";
+	size_t	max = strlen(s2);
+	char	*i1 = strnstr(s1, s2, max);
+	char	*i2 = ft_strnstr(s1, s2, max);
     printf("Função: strnstr\n");
     printf("ft_strnstr:%s\n", ft_strnstr(test_strnstr_1, test_strnstr_2, 20));
     printf("original:%s\n", strnstr(test_strnstr_1, test_strnstr_2, 20));
+    printf("Função: strnstr\n");
+    printf("ft_strnstr:%s\n", i1;
+    printf("original:%s\n", i2));
     printf("--------------------\n");
     //strncmp
     char test_strncmp[10] = "\0";
