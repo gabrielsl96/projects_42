@@ -87,9 +87,15 @@ int main(void)
     //strlcat
     char test_strlcat_1[40] = "asdkjasdjkadsah";
     char test_strlcat_2[40] = " Carambola";
-    //char test_strlcat_3[20] = "asdkjasdjkadsah";
-    //char test_strlcat_4[20] = " Carambola";
+    char test_strlcat_3[20] = "asdkjasdjkadsah";
+    char test_strlcat_4[20] = " Carambola";
+    char	s1[4] = "";
+	char	s2[4] = "";
+	r1 = strlcat(s1, "thx to ntoniolo for this test !", 4);
+	r2 = ft_strlcat(s2, "thx to ntoniolo for this test !", 4);
     printf("Função: strlcat\n");
+    print("Orginal: Texto: %s e resultado: %i\n", s1, r1);
+    print("Texto: %s e resultado: %i\n", s2, r2);
     ft_strlcat(test_strlcat_1, test_strlcat_2, 10);
     printf("ft_strlcat:%s\n", test_strlcat_1);
     //strlcat(test_strlcat_3, test_strlcat_4, 20);
