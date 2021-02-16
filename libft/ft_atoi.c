@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/16 15:12:44 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/02/16 15:12:44 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/02/16 16:05:28 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int     ft_atoi(const char *nptr)
     num = 0;
     count = 0;
     signal = 1;
-    while (nptr[count] >= 7 && nptr[count] <= 13)
+    while ((nptr[count] >= 7 && nptr[count] <= 13) || nptr[count] == ' ')
         count++;
     if (nptr[count] == '-' || nptr[count] == '+')
     {
