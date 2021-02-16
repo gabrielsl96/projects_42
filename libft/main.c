@@ -76,30 +76,30 @@ int main(void)
     //strlcpy
     char test_strlcpy_1[20] = "asdkjasdjkadsah";
     char test_strlcpy_2[20] = " Carambola";
-    char test_strlcpy_3[20] = "asdkjasdjkadsah";
-    char test_strlcpy_4[20] = " Carambola";
+    //char test_strlcpy_3[20] = "asdkjasdjkadsah";
+    //char test_strlcpy_4[20] = " Carambola";
     printf("Função: strlcpy\n");
     ft_strlcpy(test_strlcpy_1, test_strlcpy_2, 0);
     printf("ft_strlcpy:%s\n", test_strlcpy_1);
-    strlcpy(test_strlcpy_3, test_strlcpy_4, 20);
-    printf("original:%s\n", test_strlcpy_3);
+    //strlcpy(test_strlcpy_3, test_strlcpy_4, 20);
+    //printf("original:%s\n", test_strlcpy_3);
     printf("--------------------\n");
     //strlcat
     char test_strlcat_1[40] = "asdkjasdjkadsah";
     char test_strlcat_2[40] = " Carambola";
-    char test_strlcat_3[20] = "asdkjasdjkadsah";
-    char test_strlcat_4[20] = " Carambola";
-    char	s1[4] = "";
+    //char test_strlcat_3[20] = "asdkjasdjkadsah";
+    //char test_strlcat_4[20] = " Carambola";
+    //char	s1[4] = "";
 	char	s2[4] = "";
-	size_t r1 = strlcat(s1, "thx to ntoniolo for this test !", 4);
+	//size_t r1 = strlcat(s1, "thx to ntoniolo for this test !", 4);
 	size_t r2 = ft_strlcat(s2, "thx to ntoniolo for this test !", 4);
     printf("Função: strlcat\n");
-    printf("Orginal: Texto: %s e resultado: %zu\n", s1, r1);
+    //printf("Orginal: Texto: %s e resultado: %zu\n", s1, r1);
     printf("Texto: %s e resultado: %zu\n", s2, r2);
     ft_strlcat(test_strlcat_1, test_strlcat_2, 10);
     printf("ft_strlcat:%s\n", test_strlcat_1);
-    strlcat(test_strlcat_3, test_strlcat_4, 10);
-    printf("original:%s\n", test_strlcat_3);
+    //strlcat(test_strlcat_3, test_strlcat_4, 10);
+    //printf("original:%s\n", test_strlcat_3);
     printf("--------------------\n");
     //strchr
     char test_strchr_1[40] = "asdjasdjkadsah";
@@ -119,12 +119,12 @@ int main(void)
     char	*f1 = "MZIRIBMZIRIBMZE123";
 	char	*f2 = "MZIRIBMZE";
 	size_t	max = strlen(f2);
-	char	*i1 = strnstr(f1, f2, max);
+	//char	*i1 = strnstr(f1, f2, max);
 	char	*i2 = ft_strnstr(f1, f2, max);
     printf("Função: strnstr\n");
     printf("ft_strnstr:%s\n", ft_strnstr(test_strnstr_1, test_strnstr_2, 20));
-    printf("original:%s\n", strnstr(test_strnstr_1, test_strnstr_2, 20));
-    printf("ft_strnstr:%s\n", i1);
+    //printf("original:%s\n", strnstr(test_strnstr_1, test_strnstr_2, 20));
+    //printf("ft_strnstr:%s\n", i1);
     printf("original:%s\n", i2);
     printf("--------------------\n");
     //strncmp
@@ -133,6 +133,15 @@ int main(void)
     printf("Função: strncmp\n");
     printf("ft_strncmp:%i\n", ft_strncmp(test_strncmp, test_strncmp_2, 3));
     printf("original:%i\n", strncmp(test_strncmp, test_strncmp_2, 3));
+    printf("--------------------\n");
+    //atoi
+    printf("Função: atoi\n");
+    char test_atoi_1[20] = "\t\na-52685";
+    char test_atoi_2[20] = "\t\nb52685";
+    printf("Ft_atoi: %i\n", ft_atoi(test_atoi_1));
+    printf("Ft_atoi: %i\n", ft_atoi(test_atoi_2));
+    printf("original: %i\n", atoi(test_atoi_1));
+    printf("original: %i\n", atoi(test_atoi_2));
     printf("--------------------\n");
     //isalnum
     char a_alnum = ' ';
