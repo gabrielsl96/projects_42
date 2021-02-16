@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/16 18:14:32 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/02/16 20:33:15 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/02/16 20:34:11 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,6 @@ char	*ft_strdup(const char *s)
 		dest[count] = s[count];
 		count++;
 	}
+	dest[count] = '\0';
 	return (dest);
 }
