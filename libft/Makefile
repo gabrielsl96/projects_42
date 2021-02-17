@@ -36,7 +36,8 @@ SRC 	= ft_bzero.c \
 			ft_tolower.c \
 			ft_toupper.c \
 			ft_calloc.c \
-			ft_strdup.c
+			ft_strdup.c \
+			ft_substr.c
 
 NAME 	= libft.a
 
