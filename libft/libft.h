@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/16 20:01:47 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/02/16 20:28:21 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/02/17 13:41:13 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,5 @@
 	void	*ft_calloc(size_t nmemb, size_t size);
 	char	*ft_strdup(const char *s);
 	char	*ft_substr(char const *s, unsigned int start, size_t len);
+    char	*ft_strjoin(char const *s1, char const *s2);
 #endif
