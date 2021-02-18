@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/16 18:14:32 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/02/16 20:34:11 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/02/18 09:15:06 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strdup(const char *s)
 {
-	int len;
-	int count;
-	char *dest;
+	int		len;
+	int		count;
+	char	*dest;
 
 	count = 0;
 	len = ft_strlen(s);

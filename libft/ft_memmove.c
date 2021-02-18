@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 10:54:53 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/02/16 20:11:34 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/02/18 09:15:19 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	char *src_temp;
-	char *dest_temp;
-	size_t count;
+	char	*src_temp;
+	char	*dest_temp;
+	size_t	count;
 
 	src_temp = (char *)src;
 	dest_temp = (char *)dest;

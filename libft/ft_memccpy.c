@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/03 21:59:06 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/02/16 20:05:33 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/02/18 09:13:46 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
-	size_t count;
-	unsigned char *ptr_dest;
-	unsigned char *ptr_src;
+	size_t			count;
+	unsigned char	*ptr_dest;
+	unsigned char	*ptr_src;
 
 	ptr_dest = (unsigned char *)dest;
 	ptr_src = (unsigned char *)src;
