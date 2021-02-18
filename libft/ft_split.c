@@ -6,50 +6,94 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/18 08:41:55 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/02/18 09:10:08 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/02/18 12:23:32 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_getlen(const char *s1, char c1)
+static int		ft_nbmwords(char const *s1, char c)
 {
+	int	count;
+	int	check;
 	int i;
-	int len;
 
+	count = 0;
+	check = 0;
 	i = 0;
-	len = 0;
-	while (s1[i] == c1)
-		i++;
-	while (s1[i] && s1[i] != c1)
+	if (!s1)
+		return (0);
+	while (s1[i])
 	{
-		len++;
-		s1++;
-	}
-	return (len);
-}
-
-char	**ft_split(char const *s, char c)
-{
-	char	**str;
-	int		i;
-	int		j;
-
-	i = 0;
-	j = 0;
-	if (!s || !c)
-		return (NULL);
-	if (!(str = malloc(ft_getlen(s, c) + 1)))
-		return (NULL);
-	while (s[i])
-	{
-		if (s[i] != c)
+		if (s1[i] == c)
+			check = 0;
+		else if (check == 0)
 		{
-			str[j] = ((char **)s)[i];
-			j++;
+			check = 1;
+			count++;
 		}
 		i++;
 	}
-	str[j] = '\0';
-	return (str);
+	return (count);
+}
+
+static int		ft_lenword(char const *s2, char c2, int i)
+{
+	int	lenght;
+
+	lenght = 0;
+	while (s2[i] != c2 && s2[i])
+	{
+		lenght++;
+		i++;
+	}
+	return (lenght);
+}
+
+static char		**ft_freearr(char const **dest, int j1)
+{
+	while (j1 > 0)
+	{
+		j1--;
+		free((void *)dest[j1]);
+	}
+	free(dest);
+	return (NULL);
+}
+
+static char		**ft_strwrite(char const *s, char **dest, char c, int words)
+{
+	int	i;
+	int	j;
+	int	k;
+
+	i = 0;
+	j = 0;
+	while (s[i] && j < words)
+	{
+		k = 0;
+		while (s[i] == c)
+			i++;
+		if (!(dest[j] = malloc(sizeof(char) * ft_lenword(s, c, i) + 1)))
+			return (ft_freearr((char const **)dest, j));
+		while (s[i] && s[i] != c)
+			dest[j][k++] = s[i++];
+		dest[j][k] = '\0';
+		j++;
+	}
+	dest[j] = NULL;
+	return (dest);
+}
+
+char			**ft_split(char const *s, char c)
+{
+	char	**str;
+	int		words;
+
+	if (!s)
+		return (NULL);
+	words = ft_nbmwords(s, c);
+	if (!(str = malloc(sizeof(char *) * (words + 1))))
+		return (NULL);
+	return (ft_strwrite(s, str, c, words));
 }

@@ -57,8 +57,8 @@ int main(void)
     char test_memchr[10] = "Carambola";
     char test_memchr_1[10] = "Carambola";
     printf("Função: memchr\n");
-    printf("ft_memchr:%s\n", ((char *)ft_memchr(test_memchr, 'l', 1)));
-    printf("original:%s\n", ((char *)memchr(test_memchr_1, 'l', 1)));
+    printf("ft_memchr:%s\n", ((char *)ft_memchr(test_memchr, 'l', 10)));
+    printf("original:%s\n", ((char *)memchr(test_memchr_1, 'l', 10)));
     printf("--------------------\n");
     //memcmp
     char test_memcmp[10] = "A";
@@ -104,14 +104,14 @@ int main(void)
     //strchr
     char test_strchr_1[40] = "asdjasdjkadsah";
     printf("Função: strchr\n");
-    printf("ft_strchr:%s\n", ft_strchr(test_strchr_1, 'a'));
-    printf("original:%s\n", strchr(test_strchr_1, 'a'));
+    printf("ft_strchr:%s\n", ft_strchr(test_strchr_1, 'j'));
+    printf("original:%s\n", strchr(test_strchr_1, 'j'));
     printf("--------------------\n");
     //strrchr
     char test_strrchr_1[40] = "asdjasdjkadsah";
     printf("Função: strrchr\n");
-    printf("ft_strrchr:%s\n", ft_strrchr(test_strrchr_1, '\0'));
-    printf("original:%s\n", strrchr(test_strchr_1, '\0'));
+    printf("ft_strrchr:%s\n", ft_strrchr(test_strrchr_1, 'a'));
+    printf("original:%s\n", strrchr(test_strchr_1, 'a'));
     printf("--------------------\n");
     //strnstr
     char *test_strnstr_1 = "PAR PARAque teste legal";
