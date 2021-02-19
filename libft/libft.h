@@ -6,12 +6,13 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/16 20:01:47 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/02/18 16:36:17 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/02/19 09:36:09 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 	#define LIBFT_H
+    #include <unistd.h>
 	#include <strings.h>
 	#include <string.h>
 	#include <ctype.h>
@@ -47,4 +48,5 @@
 	char	*ft_strtrim(char const *s1, char const *set);
 	char    **ft_split(char  const *s, char c);
     char    *ft_itoa(int n);
+    void	ft_putchar_fd(char c, int fd);
 #endif
