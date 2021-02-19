@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/19 11:19:39 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/02/19 11:52:41 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/02/19 14:22:07 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*str;
 	int		i;
-	
+
 	if (!s || !(*f))
 		return (NULL);
 	if (!(str = malloc(sizeof(str) * (ft_strlen(s) + 1))))
@@ -28,5 +28,5 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		i++;
 	}
 	str[i] = '\0';
-	return(str);
+	return (str);
 }
