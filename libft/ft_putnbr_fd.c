@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/19 10:45:03 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/02/19 11:18:10 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/02/19 15:19:15 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,17 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	char *str;
+	unsigned int nb;
 
-	str = ft_itoa(n);
-	if (!str)
-		return ;
-	ft_putstr_fd(str, fd);
+    nb = n;
+	if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		nb = n * -1;
+	}
+	if(nb >= 10)
+	{
+		ft_putnbr_fd(nb / 10, fd);
+	}
+	ft_putchar_fd((nb % 10) + '0', fd);
 }
