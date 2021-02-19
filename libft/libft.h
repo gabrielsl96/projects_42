@@ -6,13 +6,13 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/16 20:01:47 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/02/19 10:36:50 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/02/19 11:48:00 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 	#define LIBFT_H
-    #include <unistd.h>
+	#include <unistd.h>
 	#include <strings.h>
 	#include <string.h>
 	#include <ctype.h>
@@ -46,9 +46,11 @@
 	char	*ft_substr(char const *s, unsigned int start, size_t len);
 	char	*ft_strjoin(char const *s1, char const *s2);
 	char	*ft_strtrim(char const *s1, char const *set);
-	char    **ft_split(char  const *s, char c);
-    char    *ft_itoa(int n);
-    void	ft_putchar_fd(char c, int fd);
-    void	ft_putstr_fd(char *s, int fd);
-    void	ft_putendl_fd(char *s, int fd);
+	char	**ft_split(char  const *s, char c);
+	char	*ft_itoa(int n);
+	char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+	void	ft_putchar_fd(char c, int fd);
+	void	ft_putstr_fd(char *s, int fd);
+	void	ft_putendl_fd(char *s, int fd);
+	void	ft_putnbr_fd(int n, int fd);
 #endif

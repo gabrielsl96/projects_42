@@ -6,16 +6,15 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/18 14:46:15 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/02/18 23:42:03 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/02/19 11:17:41 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-
-int ft_lennbr(long nb)
+int		ft_lennbr(long nb)
 {
-	int		count;
+	int	count;
 
 	count = 0;
 	if (nb < 0)
@@ -23,10 +22,10 @@ int ft_lennbr(long nb)
 		nb = nb * -1;
 		count++;
 	}
-    if (nb == 0)
-    {
-        count++;
-    }
+	if (nb == 0)
+	{
+		count++;
+	}
 	while (nb > 0)
 	{
 		nb = nb / 10;
@@ -37,7 +36,7 @@ int ft_lennbr(long nb)
 
 char	*ft_itoa(int n)
 {
-	char *str;
+	char	*str;
 	long	nb;
 	int		i;
 
@@ -58,9 +57,8 @@ char	*ft_itoa(int n)
 	}
 	while (nb > 0)
 	{
-		str[i] = '0' + (nb % 10);
+		str[i--] = '0' + (nb % 10);
 		nb /= 10;
-		i--;
 	}
 	return (str);
 }
