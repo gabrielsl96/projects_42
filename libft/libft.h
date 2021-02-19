@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/16 20:01:47 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/02/19 09:36:09 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/02/19 09:41:35 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,4 +49,5 @@
 	char    **ft_split(char  const *s, char c);
     char    *ft_itoa(int n);
     void	ft_putchar_fd(char c, int fd);
+    void	dt_outstr_fd(char *s, int fd);
 #endif
