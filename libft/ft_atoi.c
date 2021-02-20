@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/16 15:12:44 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/02/16 18:56:12 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/02/20 18:02:43 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_atoi(const char *nptr)
 {
-	int num;
+	long num;
 	int count;
 	int signal;
 
