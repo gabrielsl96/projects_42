@@ -6,7 +6,7 @@
 #    By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/12 10:18:13 by gsousa-l          #+#    #+#              #
-#    Updated: 2021/02/19 14:13:33 by gsousa-l         ###   ########.fr        #
+#    Updated: 2021/02/20 20:32:50 by gsousa-l         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,6 +64,7 @@ OBJS = ${SRC:.c=.o}
 ${NAME}:	${OBJS}
 			${LIB} ${NAME} ${OBJS}
 
+
 all:		${NAME}
 
 clean:
@@ -77,3 +78,5 @@ re:			fclean all
 so: 
 	$(CC) -fPIC $(CFLAGS) *.c
 	gcc -v -shared -o libft.so $(OBJS)
+
+.PHONY: all clean fclean re
