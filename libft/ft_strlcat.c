@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/10 10:55:24 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/02/19 23:06:03 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/02/20 20:20:50 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	size_t len;
-	size_t count_dest;
-	size_t count_src;
-	size_t i;
-	char *s;
+	size_t	len;
+	size_t	count_dest;
+	size_t	count_src;
+	size_t	i;
+	char	*s;
 
 	s = (char *)src;
 	count_src = ft_strlen(s);

@@ -6,17 +6,13 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/16 20:01:47 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/02/19 14:24:33 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/02/20 20:22:34 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <unistd.h>
-# include <strings.h>
-# include <string.h>
-# include <ctype.h>
-# include <stdio.h>
 # include <stdlib.h>
 
 void	*ft_memset(void *s, int c, size_t n);

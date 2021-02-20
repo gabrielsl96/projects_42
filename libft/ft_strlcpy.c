@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/10 09:38:03 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/02/20 20:10:03 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/02/20 20:21:34 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	size_t count;
 
 	if (!dest && !src)
-			return(0);
+		return (0);
 	if (size == 0)
 		return (ft_strlen(src));
 	count = 0;
