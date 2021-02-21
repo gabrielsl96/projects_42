@@ -6,7 +6,7 @@
 #    By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/12 10:18:13 by gsousa-l          #+#    #+#              #
-#    Updated: 2021/02/20 20:32:50 by gsousa-l         ###   ########.fr        #
+#    Updated: 2021/02/21 12:05:22 by gsousa-l         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,22 +56,22 @@ FLAGS 	= -Wall -Werror -Wextra -c
 
 RM 		= rm -f
 
-OBJS = ${SRC:.c=.o}
+OBJS = $(SRC:.c=.o)
 
 .c.o:
-			${CC} ${FLAGS} $< -o ${<:.c=.o}
+			$(CC) $(FLAGS) $< -o $(<:.c=.o)
 						
-${NAME}:	${OBJS}
-			${LIB} ${NAME} ${OBJS}
+$(NAME):	$(OBJS)
+			$(LIB) $(NAME) $(OBJS)
 
 
-all:		${NAME}
+all:		$(NAME)
 
 clean:
-			${RM} ${OBJS}
+			$(RM) $(OBJS)
 
 fclean:		clean
-			${RM} ${NAME}
+			$(RM) $(NAME)
 
 re:			fclean all
 	
