@@ -6,7 +6,7 @@
 #    By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/12 10:18:13 by gsousa-l          #+#    #+#              #
-#    Updated: 2021/02/21 12:05:22 by gsousa-l         ###   ########.fr        #
+#    Updated: 2021/02/21 12:16:29 by gsousa-l         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -75,8 +75,4 @@ fclean:		clean
 
 re:			fclean all
 	
-so: 
-	$(CC) -fPIC $(CFLAGS) *.c
-	gcc -v -shared -o libft.so $(OBJS)
-
 .PHONY: all clean fclean re
