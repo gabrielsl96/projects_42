@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/17 14:32:34 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/02/20 20:19:29 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/02/22 12:09:58 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (end)
 		while (s1[end + start - 1] && ft_strchr(set, s1[end + start - 1]))
 			end--;
-	if (!(new = malloc(sizeof(char) * end + 1)))
-		return (NULL);
 	new = ft_substr((char *)s1, start, end);
 	return (new);
 }
