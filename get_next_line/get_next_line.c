@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/22 14:40:36 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/03/03 19:04:48 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/03/03 19:23:32 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,8 @@ int get_next_line(int fd, char **line)
 	count = 0;
 	while ((count = read(fd, buffer, BUFFER_SIZE)) > 0)
 	{
+        if (count ==(size_t) -1)
+            return (-1);
 		if(!memo)
 		{
 			memo = ft_strdup(buffer);
