@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/22 14:40:36 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/03/04 17:38:01 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/03/04 18:44:23 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,13 @@ int	ft_line(char **memo, char **line)
 	return (1);
 }
 
-int	ft_res(char **memo, char **line, size_t count)
+int	ft_res(char **memo, char **line, int count)
 {
-	if ((int)count < 0)
+	if (count < 0)
+	{
+		free(*memo);
 		return (-1);
+	}
 	else
 		return (ft_line(memo, line));
 }
@@ -49,10 +52,10 @@ int	get_next_line(int fd, char **line)
 {
 	char		buffer[BUFFER_SIZE + 1];
 	static char *memo;
-	size_t		count;
+	int			count;
 	char		*aux;
 
-	if (fd < 0 || !line || BUFFER_SIZE <= 0)
+	if (fd < 0 || !line)
 		return (-1);
 	if (!memo)
 	{
@@ -61,8 +64,6 @@ int	get_next_line(int fd, char **line)
 	}
 	while ((count = read(fd, buffer, BUFFER_SIZE)) > 0)
 	{
-		if (count == (size_t)-1)
-			return (-1);
 		buffer[count] = '\0';
 		aux = ft_strjoin(memo, buffer);
 		free(memo);
