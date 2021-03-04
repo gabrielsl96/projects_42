@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/22 14:40:36 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/03/03 23:13:15 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/03/04 17:38:01 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,8 @@ int	get_next_line(int fd, char **line)
 		aux = ft_strjoin(memo, buffer);
 		free(memo);
 		memo = aux;
+		if (ft_strchr(memo, '\n'))
+			break ;
 	}
 	return (ft_res(&memo, line, count));
 }
