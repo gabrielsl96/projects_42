@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/22 14:40:36 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/03/04 18:44:23 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/03/05 09:07:57 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ int	ft_res(char **memo, char **line, int count)
 	if (count < 0)
 	{
 		free(*memo);
+		*memo = NULL;
 		return (-1);
 	}
 	else
