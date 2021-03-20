@@ -6,17 +6,26 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/18 18:56:42 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/03/20 18:05:27 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/03/20 19:14:47 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "../ft_printf.h"
 
+void	subst_str(char **str, int size)
+{
+	char *aux;
+
+	aux = ft_strdup(*str);
+	free(*str);
+	*str = ft_substr(aux, 0, size);
+}
 void	ft_print_s(va_list args, t_params *parameters, int *size)
 {
 	char *str;
 	char *aux;
+	char *aux2;
 	int i;
 	int str_len;
 
@@ -29,7 +38,7 @@ void	ft_print_s(va_list args, t_params *parameters, int *size)
 	if (parameters->precision == true)
 	{
 		i = parameters->value_precision;
-		ft_memmove(aux, aux, i);
+		subst_str(&aux, i);
 	}
 	str_len = ft_strlen(aux);
 	if(parameters->minus == true)
