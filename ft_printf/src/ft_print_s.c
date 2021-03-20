@@ -6,9 +6,10 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/18 18:56:42 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/03/20 17:48:57 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/03/20 18:05:27 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "../ft_printf.h"
 
@@ -54,4 +55,5 @@ void	ft_print_s(va_list args, t_params *parameters, int *size)
 	else
 		ft_putstr_fd(aux, 1);
 	*size += ft_strlen(aux);
+	free(aux);
 }

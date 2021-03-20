@@ -7,3 +7,5 @@ Minhas resoluções dos projetos do programa da escola 42|SP.
 - Função capaz de ler arquivos ou inputs da entrada padrão linha a linha.
 ### 3. netwhat
 - Projeto para conhecimento básico do funcionamento das redes de computadores.
+### 4. [ft_printf](https://github.com/gabrielsl96/projects_42/tree/main/ft_printf)
+- Clone da função print_f.
