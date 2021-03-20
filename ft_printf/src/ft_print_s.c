@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/18 18:56:42 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/03/20 17:06:00 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/03/20 17:48:57 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	ft_print_s(va_list args, t_params *parameters, int *size)
 	if (parameters->precision == true)
 	{
 		i = parameters->value_precision;
-		aux = ft_substr(aux, 0, i);
+		ft_memmove(aux, aux, i);
 	}
 	str_len = ft_strlen(aux);
 	if(parameters->minus == true)
