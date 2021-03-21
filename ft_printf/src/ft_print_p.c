@@ -6,25 +6,76 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/19 16:53:13 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/03/20 16:12:18 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/03/20 22:37:46 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
+
+char	*fill_zero(char *str, int size)
+{
+	char *aux;
+	int zeros;
+	int len;
+
+	len = ft_strlen(str);
+	zeros = 0;
+	if(len < size)
+		zeros +=  size - len;
+	aux = malloc(sizeof(aux) + (len + zeros + 3));
+	ft_memmove(aux, "0x", 2);
+	ft_memset(aux + 2, '0', zeros);
+	ft_memmove(aux + (2 + zeros), str, ft_strlen(str));
+	aux[zeros + 2 + len] = '\0';
+	return (aux);
+}
 
 void	ft_print_p(va_list args, t_params *parameters, int *size)
 {
 	long long num;
 	char *str;
 	char *aux;
+	int i;
+	int len;
 
+	len = 0;
 	num = va_arg(args, long long);
-	str = ft_dec_to_base(num, 12, 16);
-	if(str[0] == 0)
+	if(num == 0)
 		aux = ft_strdup("(nil)");
 	else
-		aux = ft_strjoin("0x", str);
-	ft_putstr_fd(aux, 1);
+	{
+		str = ft_dec_to_base(num, 12, 16);
+		if(parameters->precision == true)
+		{
+			i = parameters->value_precision;
+			aux = fill_zero(str, i);
+		}
+		else
+			aux = ft_strjoin("0x", str);
+	}
+	len = ft_strlen(aux);
+	if (parameters->minus == true || parameters->zero == true)
+	{
+		ft_putstr_fd(aux, 1);
+		i = parameters->value_width;
+		while(i - len > 0)
+		{
+			ft_print_char(' ', size);
+			i--;
+		}
+	}
+	else if (parameters->width == true)
+	{
+		i = parameters->value_width;
+		while(i - len > 0)
+		{
+			ft_print_char(' ', size);
+			i--;
+		}
+		ft_putstr_fd(aux, 1);
+	}
+	else
+		ft_putstr_fd(aux, 1);
 	*size += ft_strlen(aux);
-
+	free(aux);
 }
