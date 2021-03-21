@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/19 11:15:39 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/03/21 15:40:25 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/03/21 16:06:18 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,13 +64,3 @@ void	ft_print_x(va_list args, t_params *parameters, int *size)
 	free(aux);
 }
 
-/*void	ft_print_x(va_list args, t_params *parameters, int *size)
-{
-	int num;
-	char *result_hex;
-
-	num = va_arg(args, int);
-	result_hex = ft_dec_to_base(num, 8, 16);
-	ft_putstr_fd(result_hex, 1);
-	*size += ft_strlen(result_hex);
-}*/
