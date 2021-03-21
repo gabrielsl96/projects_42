@@ -6,7 +6,7 @@
 #    By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/17 15:47:32 by gsousa-l          #+#    #+#              #
-#    Updated: 2021/03/20 16:33:22 by gsousa-l         ###   ########.fr        #
+#    Updated: 2021/03/21 15:43:21 by gsousa-l         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,8 @@ SRCS	= ft_printf.c \
 			src/ft_print_x.c \
 			src/ft_print_x_upp.c \
 			src/ft_print_pcnt.c \
-			src/ft_print_char.c
+			src/ft_print_char.c \
+			src/ft_fill_zero.c
 
 OBJS	= $(SRCS:.c=.o)
 
