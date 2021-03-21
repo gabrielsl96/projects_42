@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/19 16:53:13 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/03/20 22:37:46 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/03/21 15:12:23 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ void	ft_print_p(va_list args, t_params *parameters, int *size)
 		}
 		else
 			aux = ft_strjoin("0x", str);
+		free(str);
 	}
 	len = ft_strlen(aux);
 	if (parameters->minus == true || parameters->zero == true)

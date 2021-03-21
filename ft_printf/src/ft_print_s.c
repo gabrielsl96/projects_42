@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/18 18:56:42 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/03/20 19:14:47 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/03/21 15:11:37 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ void	subst_str(char **str, int size)
 	aux = ft_strdup(*str);
 	free(*str);
 	*str = ft_substr(aux, 0, size);
+	free(aux);
 }
 void	ft_print_s(va_list args, t_params *parameters, int *size)
 {
