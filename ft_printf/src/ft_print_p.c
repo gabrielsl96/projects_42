@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/19 16:53:13 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/03/22 11:06:17 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/03/22 14:07:47 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,10 @@ char	*fill_zero(char *str, int size)
 	int zeros;
 	int len;
 
-	len = ft_strlen(str);
 	zeros = 0;
+	if (ft_strlen(str) == 1 && str[0] == '0')
+		str[0] = '\0';
+	len = ft_strlen(str);
 	if(len < size)
 		zeros +=  size - len;
 	aux = malloc(sizeof(aux) + (len + zeros + 3));
