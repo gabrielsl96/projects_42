@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/19 09:41:23 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/03/22 10:57:25 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/03/22 13:01:17 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*fill_zero_minus(char *str, int size)
 		signal++;
 	if (len < size)
 		zeros +=  size - len + signal;
-	aux = malloc(sizeof(aux) + (len + zeros + signal + 1));
+	aux = malloc(sizeof(aux) + (len + zeros + 1));
 	ft_memmove(aux, "-", signal);
 	ft_memset(aux + signal, '0', zeros );
 	ft_memmove(aux + (signal + zeros), str + signal, len - signal);
