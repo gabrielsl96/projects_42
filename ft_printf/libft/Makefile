@@ -6,7 +6,7 @@
 #    By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/12 10:18:13 by gsousa-l          #+#    #+#              #
-#    Updated: 2021/03/17 18:14:03 by gsousa-l         ###   ########.fr        #
+#    Updated: 2021/03/22 17:03:29 by gsousa-l         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,8 +44,7 @@ SRC 	= ft_bzero.c \
 			ft_putchar_fd.c \
 			ft_putstr_fd.c \
 			ft_putendl_fd.c \
-			ft_putnbr_fd.c \
-			ft_putchar.c
+			ft_putnbr_fd.c
 
 NAME 	= libft.a
 

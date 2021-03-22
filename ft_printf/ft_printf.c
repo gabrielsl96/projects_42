@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/12 18:41:46 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/03/18 20:44:35 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/03/22 17:16:00 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	ft_printf(const char *str, ...)
 		}
 		else
 		{
-			ft_putchar(str[len]);
+			ft_putchar_fd(str[len], 1);
 			size++;
 		}
 		len++;
