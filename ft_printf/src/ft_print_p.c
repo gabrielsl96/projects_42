@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/19 16:53:13 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/03/21 15:12:23 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/03/22 11:06:17 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,20 +40,15 @@ void	ft_print_p(va_list args, t_params *parameters, int *size)
 
 	len = 0;
 	num = va_arg(args, long long);
-	if(num == 0)
-		aux = ft_strdup("(nil)");
-	else
+	str = ft_dec_to_base(num, 12, 16);
+	if(parameters->precision == true)
 	{
-		str = ft_dec_to_base(num, 12, 16);
-		if(parameters->precision == true)
-		{
-			i = parameters->value_precision;
-			aux = fill_zero(str, i);
-		}
-		else
-			aux = ft_strjoin("0x", str);
-		free(str);
+		i = parameters->value_precision;
+		aux = fill_zero(str, i);
 	}
+	else
+		aux = ft_strjoin("0x", str);
+	free(str);
 	len = ft_strlen(aux);
 	if (parameters->minus == true || parameters->zero == true)
 	{
