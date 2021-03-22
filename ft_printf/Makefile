@@ -6,7 +6,7 @@
 #    By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/17 15:47:32 by gsousa-l          #+#    #+#              #
-#    Updated: 2021/03/22 10:14:10 by gsousa-l         ###   ########.fr        #
+#    Updated: 2021/03/22 13:31:40 by gsousa-l         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,8 +56,7 @@ fclean:		clean
 			make fclean -C $(LIBFT)
 			$(RM) $(NAME)
 
-re:
-			fclean all
+re:			fclean all
 
 teste: 		all
 			$(CC) $(FLAGS) ../main_teste.c $(NAME) && ./a.out
