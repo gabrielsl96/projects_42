@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/19 11:15:39 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/03/21 15:46:52 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/03/22 14:20:24 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ void	ft_upperstr(char *str)
 		str[i] = ft_toupper(str[i]);
 		i++;
 	}
+	free(aux);
 }
 
 void	ft_print_x_upp(va_list args, t_params *parameters, int *size)
