@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/19 09:41:23 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/03/22 13:32:32 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/03/22 13:35:49 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,9 @@ char	*fill_zero_minus(char *str, int size, char type)
 	signal = 0;
 	len = ft_strlen(str);
 	zeros = 0;
-	if (str[0] == '-')
+	if (ft_strlen(str) == 1 && str[0] == '0')
+		str[0] = ' ';
+	else if (str[0] == '-')
 		signal++;
 	if (len < size)
 		if (type == '0')
