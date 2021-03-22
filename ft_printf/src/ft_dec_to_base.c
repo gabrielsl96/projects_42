@@ -67,7 +67,9 @@ char	*ft_dec_to_base(long long num, int buffer, int base)
 
 	num_digits = 0;
 	num_aux = num;
-	if (num < 0)
+	if (num == 0)
+		return (ft_strdup("0"));
+	else if (num < 0)
 		num_aux = max_num(buffer, base) + num;
 	num_digits = ft_lendigits(num_aux, base);
 	str_aux = malloc(sizeof(char) * (num_digits + 1));
