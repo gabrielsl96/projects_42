@@ -6,13 +6,13 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/19 09:41:23 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/03/22 13:01:17 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/03/22 13:18:34 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 
-char	*fill_zero_minus(char *str, int size)
+char	*fill_zero_minus(char *str, int size, char type)
 {
 	char *aux;
 	int zeros;
@@ -25,7 +25,10 @@ char	*fill_zero_minus(char *str, int size)
 	if (str[0] == '-')
 		signal++;
 	if (len < size)
-		zeros +=  size - len + signal;
+		if (type == '0')
+			zeros +=  size - len;
+		else
+			zeros += size - len + signal;
 	aux = malloc(sizeof(aux) + (len + zeros + 1));
 	ft_memmove(aux, "-", signal);
 	ft_memset(aux + signal, '0', zeros );
@@ -49,12 +52,12 @@ void	ft_print_d_i(va_list args, t_params *parameters, int *size)
 	&& parameters->minus == false)
 	{
 		i = parameters->value_width;
-		aux = fill_zero_minus(str, i);
+		aux = fill_zero_minus(str, i, '0');
 	}
 	else if (parameters->precision == true)
 	{
 		i = parameters->value_precision;
-		aux = fill_zero_minus(str, i);
+		aux = fill_zero_minus(str, i, '-');
 	}
 	else
 		aux = ft_strdup(str);
