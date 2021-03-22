@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/16 11:50:17 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/03/22 17:19:00 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/03/22 17:29:21 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_print_c(va_list args, t_params *parameters, int *size)
 
 	i = 0;
 	letter = va_arg(args, int);
-	if(parameters->minus == true)
+	if(parameters->value_width > 0)
 	{
 		i = parameters->value_width;
 		ft_print_char(letter, size);
