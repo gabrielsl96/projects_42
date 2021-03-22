@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/12 18:17:11 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/03/21 15:41:46 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/03/22 18:46:44 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <stdbool.h>
 # include "./libft/libft.h"
 
-typedef struct 	s_params
+typedef struct	s_params
 {
 	bool		minus;
 	bool		precision;
@@ -28,18 +28,18 @@ typedef struct 	s_params
 	int			value_width;
 }				t_params;
 
-int		ft_printf(const char *str, ...);
-int		ft_print_var(const char *str, va_list args, int *size);
-void	ft_print_c(va_list args, t_params *parameters, int *size);
-void	ft_print_s(va_list args, t_params *parameters, int *size);
-void	ft_print_p(va_list args, t_params *parameters, int *size);
-void	ft_print_d_i(va_list args, t_params *parameters, int *size);
-void	ft_print_u(va_list args, t_params *parameters, int *size);
-void	ft_print_x(va_list args, t_params *parameters, int *size);
-void	ft_print_x_upp(va_list args, t_params *parameters, int *size);
-void	ft_print_pcnt(va_list args, t_params *parameters, int *size);
-char	*ft_utoa(long n);
-char	*ft_dec_to_base(long long num, int buffer, int base);
-void	ft_print_char(char c, int *size);
-char	*ft_fill_zero(char *str, int size);
+int				ft_printf(const char *str, ...);
+int				ft_print_var(const char *str, va_list args, int *size);
+void			ft_print_c(va_list args, t_params *parameters, int *size);
+void			ft_print_s(va_list args, t_params *parameters, int *size);
+void			ft_print_p(va_list args, t_params *parameters, int *size);
+void			ft_print_d_i(va_list args, t_params *parameters, int *size);
+void			ft_print_u(va_list args, t_params *parameters, int *size);
+void			ft_print_x(va_list args, t_params *parameters, int *size);
+void			ft_print_x_upp(va_list args, t_params *parameters, int *size);
+void			ft_print_pcnt(va_list args, t_params *parameters, int *size);
+char			*ft_utoa(long n);
+char			*ft_dec_to_base(long long num, int buffer, int base);
+void			ft_print_char(char c, int *size);
+char			*ft_fill_zero(char *str, int size);
 #endif
