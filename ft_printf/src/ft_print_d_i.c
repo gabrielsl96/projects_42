@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/19 09:41:23 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/03/22 15:43:28 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/03/23 14:08:36 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,7 @@ char	*fill_zero_minus(char *str, int size, char type)
 
 	signal = 0;
 	zeros = 0;
-	if (ft_strlen(str) == 1 && str[0] == '0')
-		str[0] = '\0';
-	else if (str[0] == '-')
+	if (str[0] == '-')
 		signal++;
 	len = ft_strlen(str);
 	if (len <= size)
@@ -49,7 +47,7 @@ void	ft_print_d_i(va_list args, t_params *parameters, int *size)
 
 	len = 0;
 	num = va_arg(args, int);
-	str = ft_itoa(num);
+	str = ft_itoa(num); 
 	if (parameters->zero && parameters->precision == false
 	&& parameters->minus == false)
 	{
