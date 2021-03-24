@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/19 09:41:23 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/03/23 21:33:15 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/03/24 10:32:41 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,9 @@ void	ft_print_d_i(va_list args, t_params *parameters, int *size)
 	len = 0;
 	num = va_arg(args, int);
 	str = ft_itoa(num);
+	if (*str == '0' && !parameters->value_precision
+		&& parameters->precision)
+			str[0] = '\0';
 	if (parameters->zero && parameters->precision == false
 	&& parameters->minus == false)
 	{
@@ -57,8 +60,6 @@ void	ft_print_d_i(va_list args, t_params *parameters, int *size)
 	else if (parameters->precision == true)
 	{
 		i = parameters->value_precision;
-		if (str[0] == '0' && ft_strlen(str) == 1 && i == 0)
-			str[0] = '\0';
 		aux = fill_zero_minus(str, i, '-');
 	}
 	else
