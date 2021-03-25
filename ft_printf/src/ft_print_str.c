@@ -1,39 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_print_str.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/12 18:41:46 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/03/25 16:40:38 by gsousa-l         ###   ########.fr       */
+/*   Created: 2021/03/25 16:44:08 by gsousa-l          #+#    #+#             */
+/*   Updated: 2021/03/25 16:46:24 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
-int	ft_printf(const char *str, ...)
+
+void	ft_print_str(char *str, int *size)
 {
-	va_list	args;
-	int		size;
-	int		len;
+	int i;
 
-	size = 0;
-	len = 0;
-	va_start(args, str);
-	while (str[len] && size >= 0)
-	{
-		if (str[len] == '%')
-		{
-			len += ft_print_var(str + len + 1, args, &size);
-		}
-		else
-		{
-			ft_putchar_fd(str[len], 1);
-			size++;
-		}
-		len++;
-	}
-	va_end(args);
-	return (size);
+	i = 0;
+	while(str[0])
+			ft_print_char(str[i], size);
 }

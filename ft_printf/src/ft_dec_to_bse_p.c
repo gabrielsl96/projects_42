@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/15 13:11:56 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/03/25 14:57:15 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/03/25 16:16:04 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ static long long	negative_tratament(long long n, size_t uint_max)
 	return (n);
 }
 
-char				*ft_dec_to_base_p(unsigned long long n, int buffer, int base)
+char				*ft_dec_to_bse_p(unsigned long long n, int buffer, int base)
 {
 	char	*c;
 	char	*str;

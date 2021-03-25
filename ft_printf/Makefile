@@ -6,7 +6,7 @@
 #    By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/17 15:47:32 by gsousa-l          #+#    #+#              #
-#    Updated: 2021/03/25 14:58:10 by gsousa-l         ###   ########.fr        #
+#    Updated: 2021/03/25 17:00:45 by gsousa-l         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ RM		= rm -f
 
 SRCS	= ft_printf.c \
 			src/ft_dec_to_base.c \
-			src/ft_dec_to_base_p.c \
+			src/ft_dec_to_bse_p.c \
 			src/ft_utoa.c \
 			src/ft_print_var.c \
 			src/ft_print_c.c \
@@ -38,6 +38,7 @@ SRCS	= ft_printf.c \
 			src/ft_print_x_upp.c \
 			src/ft_print_pcnt.c \
 			src/ft_print_char.c \
+			src/ft_print_str.c \
 			src/ft_fill_zero.c
 
 OBJS	= $(SRCS:.c=.o)

@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/19 16:53:13 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/03/25 15:32:04 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/03/25 17:03:05 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	ft_print_p(va_list args, t_params *parameters, int *size)
 	if (!num && !parameters->value_precision && parameters->precision)
 			str =ft_strdup("");
 	else
-		str = ft_dec_to_base_p(num, 16, 16);
+		str = ft_dec_to_bse_p(num, 16, 16);
 	if(parameters->precision == true)
 	{
 		i = parameters->value_precision;

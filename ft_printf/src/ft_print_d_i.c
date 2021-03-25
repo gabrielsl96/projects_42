@@ -6,18 +6,58 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/19 09:41:23 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/03/25 11:51:33 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/03/25 17:00:30 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 
+void	print_width_d_i(char *str, t_params *parameters, int len, int *size)
+{
+	int signal;
+	int i;
+
+	signal = 0;
+	i = parameters->value_width;
+	while(i - len > 0)
+	{
+		if (parameters->zero && parameters->value_precision < 0 && len > 0)
+		{
+			if (*str == '-')
+			{
+				ft_print_char(*str, size);
+				signal = 1;
+				continue ;
+			}
+			ft_print_char('0', size);
+		}
+		else
+			ft_print_char(' ', size);
+		i--;
+	}
+	ft_print_str(str + signal, size);
+}
+
+void	print_minus_d_i(char *str, t_params *parameters, int len, int *size)
+{
+	int i;
+
+	i = 0;
+	ft_print_str(str, size);
+	i = parameters->value_width;
+	while(i - len > 0)
+	{
+		ft_print_char(' ', size);
+		i--;
+	}
+}
+
 char	*fill_zero_minus(char *str, int size, char type)
 {
-	char *aux;
-	int zeros;
-	int len;
-	int signal;
+	char	*aux;
+	int		zeros;
+	int		len;
+	int		signal;
 
 	signal = 0;
 	zeros = 0;
@@ -37,16 +77,12 @@ char	*fill_zero_minus(char *str, int size, char type)
 	return (aux);
 }
 
-void	ft_print_d_i(va_list args, t_params *parameters, int *size)
+char	*set_string_d_i(int num, t_params *parameters)
 {
-	int num;
-	int i;
-	int len;
 	char *str;
-	char *aux;
+	int i;
 
-	len = 0;
-	num = va_arg(args, int);
+	i = 0;
 	str = ft_itoa(num);
 	if (*str == '0' && !parameters->value_precision
 		&& parameters->precision)
@@ -55,53 +91,37 @@ void	ft_print_d_i(va_list args, t_params *parameters, int *size)
 	&& parameters->minus == false)
 	{
 		i = parameters->value_width;
-		aux = fill_zero_minus(str, i, '0');
+		return (fill_zero_minus(str, i, '0'));
 	}
 	else if (parameters->precision == true)
 	{
 		i = parameters->value_precision;
-		aux = fill_zero_minus(str, i, '-');
+		return (fill_zero_minus(str, i, '-'));
 	}
 	else
-		aux = ft_strdup(str);
+		return (ft_strdup(str));
 	free(str);
-	len = ft_strlen(aux);
+}
+
+void	ft_print_d_i(va_list args, t_params *parameters, int *size)
+{
+	int num;
+	int i;
+	int len;
+	char *str;
+
+	len = 0;
+	str = set_string_d_i(va_arg(args, int), parameters);
+	len = ft_strlen(str);
 	if (parameters->minus == true)
 	{
-		ft_putstr_fd(aux, 1);
-		i = parameters->value_width;
-		while(i - len > 0)
-		{
-			ft_print_char(' ', size);
-			i--;
-		}
+		print_minus_d_i(str, parameters, len, size);
 	}
 	else if (parameters->width == true)
 	{
-		i = parameters->value_width;
-		while(i - len > 0)
-		{
-			if (parameters->zero && parameters->value_precision < 0
-			&& len > 0)
-			{
-				if (*aux == '-')
-				{
-					ft_print_char(*aux++, size);
-					continue ;
-				}
-				ft_print_char('0', size);
-			}
-			else
-				ft_print_char(' ', size);
-			i--;
-		}
-		while(*aux != '\0')
-			ft_print_char(*aux++, size);
-		free(aux - len);
-		return ;
+		print_width_d_i(str, parameters, len, size);
 	}
 	else
-		ft_putstr_fd(aux, 1);
-	*size += ft_strlen(aux);
-	free(aux);
+		ft_print_str(str, size);
+	free(str);
 }
