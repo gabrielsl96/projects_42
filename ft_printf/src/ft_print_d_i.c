@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/19 09:41:23 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/03/25 17:33:16 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/03/25 17:52:39 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ void	print_width_d_i(char *str, t_params *parameters, int len, int *size)
 	{
 		if (parameters->zero && parameters->value_precision < 0 && len > 0)
 		{
-			if (*str == '-')
+			if (str[0] == '-' && signal == 0)
 			{
-				ft_print_char(*str, size);
+				ft_print_char('-', size);
 				signal = 1;
 				continue ;
 			}
