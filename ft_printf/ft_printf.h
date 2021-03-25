@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/12 18:17:11 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/03/25 14:31:12 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/03/25 14:58:32 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,8 @@ void			ft_print_x(va_list args, t_params *parameters, int *size);
 void			ft_print_x_upp(va_list args, t_params *parameters, int *size);
 void			ft_print_pcnt(va_list args, t_params *parameters, int *size);
 char			*ft_utoa(long n);
-char			*ft_dec_to_base(unsigned long long num, int buffer, int base);
+char			*ft_dec_to_base(long long num, int buffer, int base);
+char			*ft_dec_to_base_p(unsigned long long num, int buffer, int base);
 void			ft_print_char(char c, int *size);
 char			*ft_fill_zero(char *str, int size);
 #endif
