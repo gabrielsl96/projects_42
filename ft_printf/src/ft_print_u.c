@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/19 10:32:28 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/03/25 19:05:45 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/03/25 19:12:42 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,10 +89,8 @@ void	ft_print_u(va_list args, t_params *parameters, int *size)
 {
 	char	*str;
 	long	num;
-	int		i;
 	int		len;
 
-	len = 0;
 	num = va_arg(args, int);
 	converter_unsigned(&num);
 	str = set_string_u(num, parameters);
