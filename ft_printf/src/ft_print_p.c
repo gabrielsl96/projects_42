@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/19 16:53:13 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/03/25 18:11:53 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/03/25 18:12:55 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,7 @@ void	ft_print_p(va_list args, t_params *parameters, int *size)
 	int			len;
 
 	len = 0;
-	str = set_string_d_i(va_arg(args, int), parameters);
+	str = set_string_p(va_arg(args, int), parameters);
 	len = ft_strlen(str);
 	if (parameters->minus == true || parameters->zero == true)
 		print_minus_p(str, parameters, len, size);
