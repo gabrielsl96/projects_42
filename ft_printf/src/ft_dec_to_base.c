@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/15 13:11:56 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/03/25 14:00:30 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/03/25 14:17:33 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ char		*ft_dec_to_base(long long num, int buffer, int base)
 	num_aux = num;
 	if (num == 0)
 		return (ft_strdup("0"));
-	else if (num < 0)
+	else if (num <= 0)
 		num_aux = max_num(buffer, base) + num;
 	num_digits = ft_lendigits(num_aux, base);
 	str_aux = malloc(sizeof(char) * (num_digits + 1));
