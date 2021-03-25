@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/16 18:51:24 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/03/22 09:22:03 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/03/25 11:52:56 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,12 @@
 
 void	set_flags(const char *str, t_params *params, int *len)
 {
+	params->zero = false;
+	params->minus = false;
+	params->width = false;
+	params->precision = false;
+	params->value_precision = 0;
+	params->value_width = 0;
 	while (str[*len] == '-' || str[*len] == '0')
 	{
 		if (str[*len] == '-')
