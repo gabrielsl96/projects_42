@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/19 10:32:28 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/03/21 15:42:29 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/03/25 12:12:35 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,9 @@ void	ft_print_u(va_list args, t_params *parameters, int *size)
 	num = va_arg(args, int);
 	converter_unsigned(&num);
 	str = ft_utoa(num);
+	if (*str == '0' && !parameters->value_precision
+		&& parameters->precision)
+			str[0] = '\0';
 	if (parameters->zero && parameters->precision == false
 	&& parameters->minus == false)
 	{

@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/19 11:15:39 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/03/22 16:03:01 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/03/25 12:14:44 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,9 @@ void	ft_print_x_upp(va_list args, t_params *parameters, int *size)
 	num = va_arg(args, int);
 	str = ft_dec_to_base(num, 8, 16);
 	ft_upperstr(str);
+	if (*str == '0' && !parameters->value_precision
+		&& parameters->precision)
+			str[0] = '\0';
 	if (parameters->zero && parameters->precision == false
 	&& parameters->minus == false)
 	{

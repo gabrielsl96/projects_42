@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/19 16:53:13 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/03/22 14:40:27 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/03/25 12:15:17 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ char	*fill_zero(char *str, int size)
 	int len;
 
 	zeros = 0;
-	if (ft_strlen(str) == 1 && str[0] == '0')
-		str[0] = '\0';
 	len = ft_strlen(str);
 	if(len < size)
 		zeros +=  size - len;
@@ -43,6 +41,9 @@ void	ft_print_p(va_list args, t_params *parameters, int *size)
 	len = 0;
 	num = va_arg(args, long long);
 	str = ft_dec_to_base(num, 12, 16);
+	if (*str == '0' && !parameters->value_precision
+		&& parameters->precision)
+			str[0] = '\0';
 	if(parameters->precision == true)
 	{
 		i = parameters->value_precision;
