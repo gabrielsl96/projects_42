@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/16 11:50:17 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/03/25 16:41:51 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/03/25 17:57:47 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	print_minus_c(char letter, t_params *parameters, int *size)
 void	print_width_c(char letter, t_params *parameters, int *size)
 {
 	int i;
-	
+
 	i = parameters->value_width;
 	while (i - 1 > 0)
 	{
