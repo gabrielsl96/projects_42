@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/15 13:11:56 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/03/22 18:43:57 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/03/25 14:00:30 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 long long	max_num(int buffer, int base)
 {
-	unsigned long long max;
+	long long max;
 
 	max = 1;
 	while (buffer > 0)
@@ -45,7 +45,7 @@ char		converter_char(unsigned long long num, int base)
 	return (num + 48);
 }
 
-int			ft_lendigits(unsigned long long num, int base)
+int			ft_lendigits(long long num, int base)
 {
 	long long	aux;
 	int			count;
@@ -64,7 +64,7 @@ char		*ft_dec_to_base(long long num, int buffer, int base)
 {
 	char				*str_aux;
 	int					num_digits;
-	unsigned long long	num_aux;
+	long long			num_aux;
 
 	num_digits = 0;
 	num_aux = num;
