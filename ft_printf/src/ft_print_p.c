@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/19 16:53:13 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/03/25 18:12:55 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/03/25 19:25:08 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ void	print_width_p(char *str, t_params *parameters, int len, int *size)
 {
 	int i;
 
-	i = 0;
 	i = parameters->value_width;
 	while (i - len > 0)
 	{
@@ -30,7 +29,6 @@ void	print_minus_p(char *str, t_params *parameters, int len, int *size)
 {
 	int i;
 
-	i = 0;
 	ft_print_str(str, size);
 	i = parameters->value_width;
 	while (i - len > 0)
@@ -58,7 +56,7 @@ char	*fill_zero(char *str, int size)
 	return (aux);
 }
 
-char	*set_string_p(int num, t_params *parameters)
+char	*set_string_p(long long num, t_params *parameters)
 {
 	char	*str;
 	char	*aux;
