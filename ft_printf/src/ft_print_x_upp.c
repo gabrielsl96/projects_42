@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/19 11:15:39 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/03/25 19:18:20 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/03/25 20:05:47 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,13 +66,14 @@ void	print_minus_x_upp(char *str, t_params *parameters, int len, int *size)
 	}
 }
 
-char	*set_string_x_upp(long num, t_params *parameters)
+char	*set_string_x_upp(int num, t_params *parameters)
 {
 	int		i;
 	char	*str;
 	char	*aux;
 
 	str = ft_dec_to_base(num, 8, 16);
+	ft_upperstr(aux);
 	if (*str == '0' && !parameters->value_precision && parameters->precision)
 		str[0] = '\0';
 	if (parameters->zero && parameters->precision == false
@@ -88,7 +89,6 @@ char	*set_string_x_upp(long num, t_params *parameters)
 	}
 	else
 		aux = ft_strdup(str);
-	ft_upperstr(aux);
 	free(str);
 	return (aux);
 }
