@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/19 09:41:23 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/03/25 17:52:39 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/03/25 18:40:16 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,8 @@ void	print_minus_d_i(char *str, t_params *parameters, int len, int *size)
 {
 	int i;
 
-	i = 0;
-	ft_print_str(str, size);
 	i = parameters->value_width;
+	ft_print_str(str, size);
 	while (i - len > 0)
 	{
 		ft_print_char(' ', size);

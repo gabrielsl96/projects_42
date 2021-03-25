@@ -6,40 +6,71 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/19 10:32:28 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/03/25 12:24:06 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/03/25 18:44:06 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
+
+void	print_width_u(char *str, t_params *parameters, int len, int *size)
+{
+	int signal;
+	int i;
+
+	signal = 0;
+	i = parameters->value_width;
+	while (i - len > 0)
+	{
+		if (parameters->zero && parameters->value_precision < 0 && len > 0)
+		{
+			if (str[0] == '-' && signal == 0)
+			{
+				ft_print_char('-', size);
+				signal = 1;
+				continue ;
+			}
+			ft_print_char('0', size);
+		}
+		else
+			ft_print_char(' ', size);
+		i--;
+	}
+	ft_print_str(str + signal, size);
+}
+
+void	print_minus_u(char *str, t_params *parameters, int len, int *size)
+{
+	int i;
+
+	i = parameters->value_width;
+	ft_print_str(str, size);
+	while (i - len > 0)
+	{
+		ft_print_char(' ', size);
+		i--;
+	}
+}
 
 void	converter_unsigned(long *num)
 {
 	long max_num;
 
 	max_num = 4294967296;
-	if(*num < 0)
-	{
+	if (*num < 0)
 		*num = 4294967296 + *num;
-	}
 }
 
-void	ft_print_u(va_list args, t_params *parameters, int *size)
+char	*set_string_u(int num, t_params *parameters)
 {
-	char *str;
-	char *aux;
-	long num;
-	int i;
-	int len;
+	int		i;
+	char	*str;
+	char	*aux;
 
-	len = 0;
-	num = va_arg(args, int);
-	converter_unsigned(&num);
 	str = ft_utoa(num);
-	if (*str == '0' && !parameters->value_precision
-		&& parameters->precision)
-			str[0] = '\0';
+	if (*str == '0' && !parameters->value_precision && parameters->precision)
+		str[0] = '\0';
 	if (parameters->zero && parameters->precision == false
-	&& parameters->minus == false)
+		&& parameters->minus == false)
 	{
 		i = parameters->value_width;
 		aux = ft_fill_zero(str, i);
@@ -52,43 +83,25 @@ void	ft_print_u(va_list args, t_params *parameters, int *size)
 	else
 		aux = ft_strdup(str);
 	free(str);
-	len = ft_strlen(aux);
+}
+
+void	ft_print_u(va_list args, t_params *parameters, int *size)
+{
+	char	*str;
+	long	num;
+	int		i;
+	int		len;
+
+	len = 0;
+	num = va_arg(args, int);
+	converter_unsigned(&num);
+	str = set_string_u(num, parameters);
+	len = ft_strlen(str);
 	if (parameters->minus == true)
-	{
-		ft_putstr_fd(aux, 1);
-		i = parameters->value_width;
-		while(i - len > 0)
-		{
-			ft_print_char(' ', size);
-			i--;
-		}
-	}
+		print_minus_u(str, parameters, len, size);
 	else if (parameters->width == true)
-	{
-		i = parameters->value_width;
-		while(i - len > 0)
-		{
-			if (parameters->zero && parameters->value_precision < 0
-			&& len > 0)
-			{
-				if (*aux == '-')
-				{
-					ft_print_char(*aux++, size);
-					continue ;
-				}
-				ft_print_char('0', size);
-			}
-			else
-				ft_print_char(' ', size);
-			i--;
-		}
-		while(*aux != '\0')
-			ft_print_char(*aux++, size);
-		free(aux - len);
-		return ;
-	}
+		print_width_u(str, parameters, len, size);
 	else
-		ft_putstr_fd(aux, 1);
-	*size += ft_strlen(aux);
-	free(aux);
+		ft_print_str(str, size);
+	free(str);
 }
