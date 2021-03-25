@@ -6,15 +6,13 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/12 18:17:11 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/03/25 17:01:01 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/03/25 19:19:55 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 # include <stdarg.h>
-# include <stdio.h>
-# include <stdlib.h>
 # include <stdbool.h>
 # include "./libft/libft.h"
 
