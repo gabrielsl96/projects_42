@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/19 17:45:08 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/03/25 18:20:57 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/03/25 20:53:17 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	print_zero_pcnt(int i, t_params *parameters, int *size)
 {
 	while (i - 1 > 0)
 	{
-		ft_print_char(' ', size);
+		ft_print_char('0', size);
 		i--;
 	}
 	ft_print_char('%', size);
@@ -26,7 +26,7 @@ void	print_width_pcnt(int i, t_params *parameters, int *size)
 {
 	while (i - 1 > 0)
 	{
-		ft_print_char('0', size);
+		ft_print_char(' ', size);
 		i--;
 	}
 	ft_print_char('%', size);
