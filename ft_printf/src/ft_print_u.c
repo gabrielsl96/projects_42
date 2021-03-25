@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/19 10:32:28 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/03/25 18:44:06 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/03/25 18:46:08 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,9 @@ void	converter_unsigned(long *num)
 
 	max_num = 4294967296;
 	if (*num < 0)
+	{
 		*num = 4294967296 + *num;
+	}
 }
 
 char	*set_string_u(int num, t_params *parameters)
