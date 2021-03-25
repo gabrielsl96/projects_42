@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/19 10:32:28 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/03/25 18:47:05 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/03/25 19:05:45 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,16 +53,13 @@ void	print_minus_u(char *str, t_params *parameters, int len, int *size)
 
 void	converter_unsigned(long *num)
 {
-	long max_num;
-
-	max_num = 4294967296;
 	if (*num < 0)
 	{
 		*num = 4294967296 + *num;
 	}
 }
 
-char	*set_string_u(int num, t_params *parameters)
+char	*set_string_u(long num, t_params *parameters)
 {
 	int		i;
 	char	*str;
