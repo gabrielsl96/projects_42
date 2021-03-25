@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/19 10:32:28 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/03/25 12:12:35 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/03/25 12:24:06 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,10 +68,24 @@ void	ft_print_u(va_list args, t_params *parameters, int *size)
 		i = parameters->value_width;
 		while(i - len > 0)
 		{
-			ft_print_char(' ', size);
+			if (parameters->zero && parameters->value_precision < 0
+			&& len > 0)
+			{
+				if (*aux == '-')
+				{
+					ft_print_char(*aux++, size);
+					continue ;
+				}
+				ft_print_char('0', size);
+			}
+			else
+				ft_print_char(' ', size);
 			i--;
 		}
-		ft_putstr_fd(aux, 1);
+		while(*aux != '\0')
+			ft_print_char(*aux++, size);
+		free(aux - len);
+		return ;
 	}
 	else
 		ft_putstr_fd(aux, 1);
