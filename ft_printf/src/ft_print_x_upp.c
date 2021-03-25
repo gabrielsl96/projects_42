@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/19 11:15:39 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/03/25 19:17:19 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/03/25 19:18:20 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_upperstr(char *str)
 {
-	char *aux;
-	int i;
+	char	*aux;
+	int		i;
 
 	i = 0;
 	aux = ft_strdup(str);
@@ -26,6 +26,7 @@ void	ft_upperstr(char *str)
 	}
 	free(aux);
 }
+
 void	print_width_x_upp(char *str, t_params *parameters, int len, int *size)
 {
 	int signal;
