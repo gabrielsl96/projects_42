@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/19 09:41:23 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/03/25 17:25:58 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/03/25 17:27:31 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,6 +101,7 @@ char	*set_string_d_i(int num, t_params *parameters)
 	else
 		aux = ft_strdup(str);
 	free(str);
+	return (aux);
 }
 
 void	ft_print_d_i(va_list args, t_params *parameters, int *size)
