@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/25 20:28:16 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/03/25 20:42:23 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/03/25 20:59:27 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ void	print_width_x_upp(char *str, t_params *parameters, int len, int *size)
 			if (str[0] == '-' && signal == 0)
 			{
 				ft_print_char('-', size);
-				signal == 1;
+				signal = 1;
 				continue ;
 			}
 			ft_print_char('0', size);
