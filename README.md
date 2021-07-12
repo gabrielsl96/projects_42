@@ -14,3 +14,7 @@ _A primeira 42 foi a École 42, uma escola de programação privada, gratuita, a
 - Clone da função print_f. Aceita as flags '-0.*' e as conversões 'cspiduxX%'.
 ### 5.[CUB3D](https://github.com/gabrielsl96/cub3D)
 - Motor gráfico de Wolfenstein 3D.
+### 6. [Born2beroot](https://github.com/gabrielsl96/born2beroot)
+- Configuração de um servidor ssh e introdução a virtualização.
+### 7. [Minitalk](https://github.com/gabrielsl96/minitalk)
+- Pequeno programa de trocas de dados usando sinais Unix.
